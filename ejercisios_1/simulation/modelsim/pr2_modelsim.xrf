@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/pr_2_alvarado_diego/pr2.v
+source_file = 1, C:/pr_2_alvarado_diego/output_files/Chain2.cdf
+source_file = 1, C:/pr_2_alvarado_diego/output_files/Chain4.cdf
+source_file = 1, C:/pr_2_alvarado_diego/db/pr2.cbx.xml
+design_name = pr2
+instance = comp, \oY~output , oY~output, pr2, 1
+instance = comp, \iEntrada[1]~input , iEntrada[1]~input, pr2, 1
+instance = comp, \iEntrada[0]~input , iEntrada[0]~input, pr2, 1
+instance = comp, \iEntrada[2]~input , iEntrada[2]~input, pr2, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, pr2, 1

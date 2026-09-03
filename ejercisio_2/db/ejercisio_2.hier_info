@@ -1,0 +1,19 @@
+|ejercisio_2
+iA => g6.IN0
+iA => g7.IN0
+iA => g4.IN0
+iA => g5.IN0
+iB => g5.IN1
+iB => g7.IN1
+iB => g4.IN1
+iB => g6.IN1
+iE => g4.IN2
+iE => g5.IN2
+iE => g6.IN2
+iE => g7.IN2
+oD[3] << g7.DB_MAX_OUTPUT_PORT_TYPE
+oD[2] << g6.DB_MAX_OUTPUT_PORT_TYPE
+oD[1] << g5.DB_MAX_OUTPUT_PORT_TYPE
+oD[0] << g4.DB_MAX_OUTPUT_PORT_TYPE
+
+
