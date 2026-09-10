@@ -1,0 +1,121 @@
+|ejer_3
+oS[0] << full_adder:FA0.port0
+oS[1] << full_adder:FA1.port0
+oS[2] << full_adder:FA2.port0
+oS[3] << full_adder:FA3.port0
+oC4 << full_adder:FA3.port1
+iA[0] => iA[0].IN1
+iA[1] => iA[1].IN1
+iA[2] => iA[2].IN1
+iA[3] => iA[3].IN1
+iB[0] => iB[0].IN1
+iB[1] => iB[1].IN1
+iB[2] => iB[2].IN1
+iB[3] => iB[3].IN1
+iC0 => iC0.IN1
+
+
+|ejer_3|full_adder:FA0
+S <= half_adder:HA2.port0
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => x.IN1
+y => y.IN1
+z => z.IN1
+
+
+|ejer_3|full_adder:FA0|half_adder:HA1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
+|ejer_3|full_adder:FA0|half_adder:HA2
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
+|ejer_3|full_adder:FA1
+S <= half_adder:HA2.port0
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => x.IN1
+y => y.IN1
+z => z.IN1
+
+
+|ejer_3|full_adder:FA1|half_adder:HA1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
+|ejer_3|full_adder:FA1|half_adder:HA2
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
+|ejer_3|full_adder:FA2
+S <= half_adder:HA2.port0
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => x.IN1
+y => y.IN1
+z => z.IN1
+
+
+|ejer_3|full_adder:FA2|half_adder:HA1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
+|ejer_3|full_adder:FA2|half_adder:HA2
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
+|ejer_3|full_adder:FA3
+S <= half_adder:HA2.port0
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => x.IN1
+y => y.IN1
+z => z.IN1
+
+
+|ejer_3|full_adder:FA3|half_adder:HA1
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
+|ejer_3|full_adder:FA3|half_adder:HA2
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+C <= comb.DB_MAX_OUTPUT_PORT_TYPE
+x => comb.IN0
+x => comb.IN0
+y => comb.IN1
+y => comb.IN1
+
+
