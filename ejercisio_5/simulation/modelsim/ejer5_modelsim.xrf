@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/pr2_alvarado_diego/ejercisio_5/ejer5.v
+source_file = 1, C:/pr2_alvarado_diego/ejercisio_5/db/ejer5.cbx.xml
+design_name = ejer5
+instance = comp, \oD[3]~output , oD[3]~output, ejer5, 1
+instance = comp, \oD[2]~output , oD[2]~output, ejer5, 1
+instance = comp, \oD[1]~output , oD[1]~output, ejer5, 1
+instance = comp, \oD[0]~output , oD[0]~output, ejer5, 1
+instance = comp, \iA~input , iA~input, ejer5, 1
+instance = comp, \iB~input , iB~input, ejer5, 1
+instance = comp, \iE~input , iE~input, ejer5, 1
+instance = comp, \oD~0 , oD~0, ejer5, 1
+instance = comp, \oD~1 , oD~1, ejer5, 1
+instance = comp, \oD~2 , oD~2, ejer5, 1
+instance = comp, \oD~3 , oD~3, ejer5, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, ejer5, 1

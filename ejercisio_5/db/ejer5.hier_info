@@ -1,0 +1,19 @@
+|ejer5
+iA => oD.IN0
+iA => oD.IN0
+iA => oD.IN0
+iA => oD.IN0
+iB => oD.IN1
+iB => oD.IN1
+iB => oD.IN1
+iB => oD.IN1
+iE => oD.IN1
+iE => oD.IN1
+iE => oD.IN1
+iE => oD.IN1
+oD[3] << oD.DB_MAX_OUTPUT_PORT_TYPE
+oD[2] << oD.DB_MAX_OUTPUT_PORT_TYPE
+oD[1] << oD.DB_MAX_OUTPUT_PORT_TYPE
+oD[0] << oD.DB_MAX_OUTPUT_PORT_TYPE
+
+
