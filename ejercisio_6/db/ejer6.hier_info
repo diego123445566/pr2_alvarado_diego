@@ -1,0 +1,17 @@
+|ejer6
+iA[0] => _.DATAD
+iA[1] => _.DATAD
+iA[2] => _.DATAD
+iA[3] => _.DATAD
+iB[0] => _.DATAC
+iB[1] => _.DATAC
+iB[2] => _.DATAC
+iB[3] => _.DATAC
+iCin => _.DATAB
+oSUM[0] << _.SUM_OUT
+oSUM[1] << _.SUM_OUT
+oSUM[2] << _.SUM_OUT
+oSUM[3] << _.SUM_OUT
+oCout << _.SUM_OUT
+
+
