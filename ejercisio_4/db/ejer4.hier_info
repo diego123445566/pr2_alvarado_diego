@@ -1,0 +1,8 @@
+|ejer4
+iA => comb.DATAIN
+iB => comb.DATAIN
+iSelector => comb.OE
+iSelector => comb.OE
+oSalida << oSalida.DB_MAX_OUTPUT_PORT_TYPE
+
+
