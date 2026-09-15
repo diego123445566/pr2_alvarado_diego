@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, C:/pr2_alvarado_diego/ejercisio_9/ejer9.v
+source_file = 1, C:/pr2_alvarado_diego/ejercisio_9/db/ejer9.cbx.xml
+design_name = ejer9
+instance = comp, \oSalida~output , oSalida~output, ejer9, 1
+instance = comp, \iB~input , iB~input, ejer9, 1
+instance = comp, \iA~input , iA~input, ejer9, 1
+instance = comp, \iSelect~input , iSelect~input, ejer9, 1
+instance = comp, \oSalida~0 , oSalida~0, ejer9, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, ejer9, 1
