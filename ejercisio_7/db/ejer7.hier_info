@@ -1,0 +1,30 @@
+|ejer7
+iA[0] => LessThan0.IN4
+iA[0] => LessThan1.IN4
+iA[0] => Equal0.IN3
+iA[1] => LessThan0.IN3
+iA[1] => LessThan1.IN3
+iA[1] => Equal0.IN2
+iA[2] => LessThan0.IN2
+iA[2] => LessThan1.IN2
+iA[2] => Equal0.IN1
+iA[3] => LessThan0.IN1
+iA[3] => LessThan1.IN1
+iA[3] => Equal0.IN0
+iB[0] => LessThan0.IN8
+iB[0] => LessThan1.IN8
+iB[0] => Equal0.IN7
+iB[1] => LessThan0.IN7
+iB[1] => LessThan1.IN7
+iB[1] => Equal0.IN6
+iB[2] => LessThan0.IN6
+iB[2] => LessThan1.IN6
+iB[2] => Equal0.IN5
+iB[3] => LessThan0.IN5
+iB[3] => LessThan1.IN5
+iB[3] => Equal0.IN4
+oAmenorB << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+oAmayorB << LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+oAigualB << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
