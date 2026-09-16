@@ -1,0 +1,10 @@
+|ejer10
+iI0 => Mux0.IN0
+iI1 => Mux0.IN1
+iI2 => Mux0.IN2
+iI3 => Mux0.IN3
+iSelect[0] => Mux0.IN5
+iSelect[1] => Mux0.IN4
+oY << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
