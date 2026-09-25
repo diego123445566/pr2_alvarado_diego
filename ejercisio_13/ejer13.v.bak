@@ -1,0 +1,112 @@
+// ============================================================================
+// MÓDULO PRINCIPAL: ALU_5bit_Top
+// ============================================================================
+module ejer13 (
+    input  wire [4:0] SW_A,       // Switches para Operando A (SW[4:0])
+    input  wire [4:0] SW_B,       // Switches para Operando B (SW[9:5])
+    input  wire [2:0] SW_Op,      // Switches para Opcode (SW[12:10])
+    output wire [4:0] LEDR_Y,     // LEDs para resultado binario (LEDR[4:0])
+    output wire       LEDR_Cout,  // LED para Carry Out (LEDR[9])
+    output wire [6:0] HEX0,       // Display Unidades
+    output wire [6:0] HEX1        // Display Decenas
+);
+
+    wire [4:0] result;
+    wire       cout;
+    wire [3:0] bcd_decenas;
+    wire [3:0] bcd_unidades;
+
+    // Instancia de la ALU
+    ALU_Core u_alu (
+        .A(SW_A),
+        .B(SW_B),
+        .opcode(SW_Op),
+        .Y(result),
+        .Cout(cout)
+    );
+
+    // Instancia del conversor Binario a BCD
+    Bin5_to_BCD u_bcd (
+        .bin(result),
+        .decenas(bcd_decenas),
+        .unidades(bcd_unidades)
+    );
+
+    // Decodificadores de 7 Segmentos
+    Hex_to_7Seg u_disp0 (
+        .hex(bcd_unidades),
+        .seg(HEX0)
+    );
+
+    Hex_to_7Seg u_disp1 (
+        .hex(bcd_decenas),
+        .seg(HEX1)
+    );
+
+    assign LEDR_Y    = result;
+    assign LEDR_Cout = cout;
+
+endmodule
+
+// ============================================================================
+// SUBMÓDULO: ALU_Core (Descripción pura mediante 'assign' y ternarios)
+// ============================================================================
+module ALU_Core (
+    input  wire [4:0] A,
+    input  wire [4:0] B,
+    input  wire [2:0] opcode,
+    output wire [4:0] Y,
+    output wire       Cout
+);
+
+    wire [5:0] sum_ext  = A + B;
+    wire [5:0] diff_ext = A - B;
+
+    // Selección RTL combinacional utilizando operadores ternarios
+    assign Y = (opcode == 3'b000) ? sum_ext[4:0] :           // Suma: A + B
+               (opcode == 3'b001) ? diff_ext[4:0] :          // Resta: A - B
+               (opcode == 3'b010) ? (A & B) :                // AND
+               (opcode == 3'b011) ? (A | B) :                // OR
+               (opcode == 3'b100) ? (A ^ B) :                // XOR
+               (opcode == 3'b101) ? (~A) :                   // NOT A
+               (opcode == 3'b110) ? (A << 1) :               // Desplazamiento Izquierda (Shift Left)
+               (A > B ? 5'b00001 : 5'b00000);                // Comparación (A > B)
+
+    // Cálculo del Carry Out / Borrow
+    assign Cout = (opcode == 3'b000) ? sum_ext[5] :
+                  (opcode == 3'b001) ? diff_ext[5] :
+                  (opcode == 3'b110) ? A[4] : 1'b0;
+
+endmodule
+
+// ============================================================================
+// SUBMÓDULO: Bin5_to_BCD (Conversión entera 0-31 a BCD)
+// ============================================================================
+module Bin5_to_BCD (
+    input  wire [4:0] bin,
+    output wire [3:0] decenas,
+    output wire [3:0] unidades
+);
+    assign decenas  = bin / 10;
+    assign unidades = bin % 10;
+endmodule
+
+// ============================================================================
+// SUBMÓDULO: Hex_to_7Seg (Ánodo Común: '0' enciende segmento)
+// ============================================================================
+module Hex_to_7Seg (
+    input  wire [3:0] hex,
+    output wire [6:0] seg
+);
+    // Asignación explícita para displays de ánodo común
+    assign seg = (hex == 4'h0) ? 7'b1000000 :
+                 (hex == 4'h1) ? 7'b1111001 :
+                 (hex == 4'h2) ? 7'b0100100 :
+                 (hex == 4'h3) ? 7'b0110000 :
+                 (hex == 4'h4) ? 7'b0011001 :
+                 (hex == 4'h5) ? 7'b0120010 : // 0100010
+                 (hex == 4'h6) ? 7'b0100001 :
+                 (hex == 4'h7) ? 7'b1111000 :
+                 (hex == 4'h8) ? 7'b0000000 :
+                 (hex == 4'h9) ? 7'b0011000 : 7'b1111111;
+endmodule 

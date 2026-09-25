@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ejer13">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ejer13|Bin5_to_BCD:u_bcd|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_2am.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ejer13|Bin5_to_BCD:u_bcd|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_52m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
